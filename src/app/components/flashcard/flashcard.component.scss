@@ -299,10 +299,14 @@ $danger: #ef4444;
     height: 100%;
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
   }
   
   &.flipped .card-inner {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
   }
   
   .card-front,
@@ -311,12 +315,14 @@ $danger: #ef4444;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     border-radius: 20px;
     overflow: hidden;
   }
   
   .card-front {
     background: linear-gradient(145deg, $primary, color.adjust($primary, $lightness: 20%));
+    z-index: 2;
     
     &::before {
       content: '';
@@ -333,6 +339,7 @@ $danger: #ef4444;
   .card-back {
     background: linear-gradient(145deg, $secondary, color.adjust($secondary, $lightness: 20%));
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     
     &::before {
       content: '';
@@ -828,6 +835,26 @@ $danger: #ef4444;
     
     &.back-icon {
       margin-top: 5px;
+    }
+  }
+  
+  .flashcard {
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    
+    .card-inner {
+      transition: transform 0.6s ease;
+      -webkit-transition: -webkit-transform 0.6s ease;
+    }
+    
+    .card-front {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+    .card-back {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
   }
 }
