@@ -281,6 +281,7 @@ $danger: #ef4444;
 .sentence-content {
   position: relative;
   padding: 1.5rem;
+  padding-top: 2.5rem;
   
   .sentence-number {
     position: absolute;
@@ -300,6 +301,7 @@ $danger: #ef4444;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    padding-top: 0.5rem;
   }
 }
 

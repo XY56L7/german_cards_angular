@@ -84,6 +84,7 @@
                 
                 <button class="btn audio-btn" (click)="playAudio(card.german, $event)">
                   <span class="audio-icon">🔊</span>
+                  <span class="audio-label">DE</span>
                 </button>
                 <div class="card-number">{{ (currentPage - 1) * itemsPerPage + i + 1 }}/{{ allFlashcards.length }}</div>
               </div>
@@ -106,8 +107,9 @@
                 </div>
                 
                 <div class="card-action-buttons">
-                  <button class="btn audio-btn" (click)="playAudio(card.english, $event)">
+                  <button class="btn audio-btn english-audio" (click)="playAudio(card.english, $event)">
                     <span class="audio-icon">🔊</span>
+                    <span class="audio-label">EN</span>
                   </button>
                   <button class="btn mark-learned-btn" 
                           (click)="markAsLearned(i, $event)" 
@@ -260,5 +262,38 @@
   
   .dark-mode .pagination-info {
     color: #aaa;
+  }
+  
+  .audio-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    color: white;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    gap: 6px;
+  }
+  
+  .audio-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .audio-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    opacity: 0.9;
+  }
+  
+  .english-audio {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .english-audio:hover {
+    background-color: rgba(0, 0, 0, 0.4);
   }
 </style>

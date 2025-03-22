@@ -263,6 +263,7 @@ $danger: #ef4444;
 
 .task-content {
   padding: 1.5rem;
+  padding-top: 2.5rem;
   
   .task-number {
     font-size: 0.8rem;
@@ -280,6 +281,7 @@ $danger: #ef4444;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    padding-top: 0.5rem;
   }
 }
 

@@ -49,6 +49,9 @@ export class FlashcardComponent implements OnInit {
   currentPage: number = 1;
   itemsPerPage: number = 6;
   totalPages: number = 1;
+  
+  // Hangok tárolása
+  availableVoices: SpeechSynthesisVoice[] = [];
 
   flavorTags: string[] = [
     'Vanille', 'Schokolade', 'Erdbeere', 
@@ -90,6 +93,9 @@ export class FlashcardComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    // Hangok inicializálása
+    this.initVoices();
+    
     this.dataService.getFlashcards().subscribe({
       next: (data) => {
         this.allFlashcards = data.map((card, index) => ({ 
@@ -114,6 +120,19 @@ export class FlashcardComponent implements OnInit {
     }
   }
   
+  // Hangok inicializálása
+  initVoices(): void {
+    // Azonnal lekérjük a hangokat, ha már elérhetőek
+    this.availableVoices = window.speechSynthesis.getVoices();
+    
+    // Ha nincs hang, akkor feliratkozunk a voiceschanged eseményre
+    if (this.availableVoices.length === 0) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        this.availableVoices = window.speechSynthesis.getVoices();
+      };
+    }
+  }
+
   loadProgress(): void {
     const savedFlashcards = localStorage.getItem('flashcards');
     const savedPoints = localStorage.getItem('points');
@@ -167,7 +186,43 @@ export class FlashcardComponent implements OnInit {
   playAudio(text: string, event: Event): void {
     event.stopPropagation();
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = text === this.getGermanTextFromEvent(event) ? 'de-DE' : 'en-US';
+    
+    // Ellenőrzés, hogy a front vagy back kártyán vagyunk
+    const cardElement = (event.target as HTMLElement).closest('.card-front, .card-back');
+    const isGermanText = cardElement?.classList.contains('card-front');
+    
+    // Nyelv beállítása
+    utterance.lang = isGermanText ? 'de-DE' : 'en-US';
+    
+    // Ha angol, további beállítások
+    if (!isGermanText) {
+      // Az angol hangbeállítások finomhangolása
+      utterance.rate = 0.9; // Lassabb beszédsebesség
+      utterance.pitch = 1.0; // Normál hangmagasság
+      
+      // Megfelelő angol hang keresése
+      const englishVoice = this.availableVoices.find(voice => 
+        (voice.lang.includes('en-US') || voice.lang.includes('en-GB')) && 
+        !voice.name.toLowerCase().includes('microsoft')
+      );
+      
+      if (englishVoice) {
+        utterance.voice = englishVoice;
+        console.log('Using English voice:', englishVoice.name);
+      } else {
+        console.log('No suitable English voice found, using default');
+      }
+    } else {
+      // Német hangbeállítások
+      const germanVoice = this.availableVoices.find(voice => 
+        voice.lang.includes('de-DE')
+      );
+      
+      if (germanVoice) {
+        utterance.voice = germanVoice;
+      }
+    }
+    
     window.speechSynthesis.speak(utterance);
   }
   
