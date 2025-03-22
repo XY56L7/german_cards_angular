@@ -1,0 +1,18 @@
+[
+    {
+      "question": "Conjugate \"sein\" for \"du\".",
+      "options": ["bin", "bist", "ist", "sind"],
+      "correct": "bist",
+      "explanation": "\"Sein\" (to be) conjugates to \"bist\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Ich gehe morgen ins Kino.",
+        "Ich morgen ins Kino gehe.",
+        "Morgen ich ins Kino gehe."
+      ],
+      "correct": "Ich gehe morgen ins Kino.",
+      "explanation": "In German, the verb is typically in the second position in a main clause."
+    }
+  ]

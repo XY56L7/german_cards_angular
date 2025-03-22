@@ -1,0 +1,754 @@
+[
+    {
+      "question": "Conjugate \"sein\" for \"du\".",
+      "options": ["bin", "bist", "ist", "sind"],
+      "correct": "bist",
+      "explanation": "\"Sein\" (to be) conjugates to \"bist\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Ich gehe morgen ins Kino.",
+        "Ich morgen ins Kino gehe.",
+        "Morgen ich ins Kino gehe."
+      ],
+      "correct": "Ich gehe morgen ins Kino.",
+      "explanation": "In German, the verb is typically in the second position in a main clause."
+    },
+    {
+      "question": "Conjugate \"haben\" for \"ich\".",
+      "options": ["habe", "hast", "hat", "haben"],
+      "correct": "habe",
+      "explanation": "\"Haben\" (to have) conjugates to \"habe\" for \"ich\" (I)."
+    },
+    {
+      "question": "Choose the correct article for \"Haus\" (neuter).",
+      "options": ["der", "die", "das", "den"],
+      "correct": "das",
+      "explanation": "\"Haus\" is neuter, so the correct nominative article is \"das\"."
+    },
+    {
+      "question": "What is the correct form of \"gehen\" for \"wir\"?",
+      "options": ["gehe", "gehst", "geht", "gehen"],
+      "correct": "gehen",
+      "explanation": "\"Gehen\" (to go) conjugates to \"gehen\" for \"wir\" (we)."
+    },
+    {
+      "question": "Which preposition fits: \"Ich wohne ___ Berlin.\"?",
+      "options": ["in", "auf", "an", "bei"],
+      "correct": "in",
+      "explanation": "The preposition \"in\" is used with cities: \"Ich wohne in Berlin.\" (I live in Berlin)."
+    },
+    {
+      "question": "Conjugate \"machen\" for \"er\".",
+      "options": ["mache", "machst", "macht", "machen"],
+      "correct": "macht",
+      "explanation": "\"Machen\" (to do/make) conjugates to \"macht\" for \"er\" (he)."
+    },
+    {
+      "question": "Choose the correct article for \"Apfel\" (masculine).",
+      "options": ["der", "die", "das", "den"],
+      "correct": "der",
+      "explanation": "\"Apfel\" is masculine, so the correct nominative article is \"der\"."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Sie liest ein Buch.",
+        "Sie ein Buch liest.",
+        "Ein Buch sie liest."
+      ],
+      "correct": "Sie liest ein Buch.",
+      "explanation": "In German, the verb is in the second position: subject-verb-object."
+    },
+    {
+      "question": "Conjugate \"sprechen\" for \"ihr\".",
+      "options": ["spreche", "sprichst", "spricht", "sprecht"],
+      "correct": "sprecht",
+      "explanation": "\"Sprechen\" (to speak) conjugates to \"sprecht\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "question": "Which case follows \"mit\"?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Dative",
+      "explanation": "The preposition \"mit\" always takes the dative case."
+    },
+    {
+      "question": "Choose the correct form: \"Ich ___ (sehen) dich.\"",
+      "options": ["sehe", "siehst", "sieht", "sehen"],
+      "correct": "sehe",
+      "explanation": "\"Sehen\" (to see) conjugates to \"sehe\" for \"ich\" (I)."
+    },
+    {
+      "question": "What is the correct article for \"Katze\" (feminine)?",
+      "options": ["der", "die", "das", "den"],
+      "correct": "die",
+      "explanation": "\"Katze\" is feminine, so the correct nominative article is \"die\"."
+    },
+    {
+      "question": "Which preposition fits: \"Ich gehe ___ Schule.\"?",
+      "options": ["in", "auf", "an", "zur"],
+      "correct": "zur",
+      "explanation": "With \"Schule,\" the contraction \"zur\" (zu + der, dative) is commonly used."
+    },
+    {
+      "question": "Conjugate \"kommen\" for \"sie\" (plural).",
+      "options": ["komme", "kommst", "kommt", "kommen"],
+      "correct": "kommen",
+      "explanation": "\"Kommen\" (to come) conjugates to \"kommen\" for \"sie\" (they)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Er trinkt jeden Tag Kaffee.",
+        "Er jeden Tag Kaffee trinkt.",
+        "Jeden Tag er Kaffee trinkt."
+      ],
+      "correct": "Er trinkt jeden Tag Kaffee.",
+      "explanation": "The verb is in the second position, followed by time expressions."
+    },
+    {
+      "question": "Choose the correct article for \"Auto\" (neuter) in the dative case.",
+      "options": ["dem", "den", "der", "die"],
+      "correct": "dem",
+      "explanation": "\"Auto\" is neuter, and the dative article is \"dem\"."
+    },
+    {
+      "question": "Conjugate \"lernen\" for \"du\".",
+      "options": ["lerne", "lernst", "lernt", "lernen"],
+      "correct": "lernst",
+      "explanation": "\"Lernen\" (to learn) conjugates to \"lernst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "Which case follows \"für\"?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Accusative",
+      "explanation": "The preposition \"für\" always takes the accusative case."
+    },
+    {
+      "question": "What is the correct form: \"Wir ___ (essen) Pizza.\"?",
+      "options": ["esse", "isst", "essen", "esst"],
+      "correct": "essen",
+      "explanation": "\"Essen\" (to eat) conjugates to \"essen\" for \"wir\" (we)."
+    },
+    {
+      "question": "Choose the correct article for \"Mann\" (masculine) in the accusative case.",
+      "options": ["der", "die", "das", "den"],
+      "correct": "den",
+      "explanation": "\"Mann\" is masculine, and the accusative article is \"den\"."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Ich habe gestern ein Buch gelesen.",
+        "Ich gestern ein Buch gelesen habe.",
+        "Gestern ich ein Buch gelesen habe."
+      ],
+      "correct": "Ich habe gestern ein Buch gelesen.",
+      "explanation": "In perfect tense, the auxiliary verb \"habe\" is in the second position, and the participle \"gelesen\" goes to the end."
+    },
+    {
+      "question": "Conjugate \"trinken\" for \"er\".",
+      "options": ["trinke", "trinkst", "trinkt", "trinken"],
+      "correct": "trinkt",
+      "explanation": "\"Trinken\" (to drink) conjugates to \"trinkt\" for \"er\" (he)."
+    },
+    {
+      "question": "Which preposition fits: \"Das Buch liegt ___ Tisch.\"?",
+      "options": ["auf", "in", "an", "unter"],
+      "correct": "auf",
+      "explanation": "\"Auf\" is used for surfaces like a table: \"Das Buch liegt auf dem Tisch.\" (The book is on the table)."
+    },
+    {
+      "question": "Choose the correct article for \"Frau\" (feminine) in the dative case.",
+      "options": ["der", "die", "dem", "den"],
+      "correct": "der",
+      "explanation": "\"Frau\" is feminine, and the dative article is \"der\"."
+    },
+    {
+      "question": "Conjugate \"schreiben\" for \"wir\".",
+      "options": ["schreibe", "schreibst", "schreibt", "schreiben"],
+      "correct": "schreiben",
+      "explanation": "\"Schreiben\" (to write) conjugates to \"schreiben\" for \"wir\" (we)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Sie hat am Montag gearbeitet.",
+        "Sie am Montag gearbeitet hat.",
+        "Am Montag sie gearbeitet hat."
+      ],
+      "correct": "Sie hat am Montag gearbeitet.",
+      "explanation": "The auxiliary verb \"hat\" is in the second position, followed by time expressions, with the participle at the end."
+    },
+    {
+      "question": "Which case follows \"von\"?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Dative",
+      "explanation": "The preposition \"von\" always takes the dative case."
+    },
+    {
+      "question": "Conjugate \"lesen\" for \"ihr\".",
+      "options": ["lese", "liest", "lest", "lesen"],
+      "correct": "lest",
+      "explanation": "\"Lesen\" (to read) conjugates to \"lest\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "question": "Choose the correct article for \"Kind\" (neuter) in the accusative case.",
+      "options": ["das", "dem", "den", "die"],
+      "correct": "das",
+      "explanation": "\"Kind\" is neuter, and the accusative article is \"das\" (same as nominative for neuter)."
+    },
+    {
+      "question": "What is the correct form: \"Er ___ (fahren) nach Hause.\"?",
+      "options": ["fahre", "fährst", "fährt", "fahren"],
+      "correct": "fährt",
+      "explanation": "\"Fahren\" (to drive) conjugates to \"fährt\" for \"er\" (he)."
+    },
+    {
+      "question": "Which preposition fits: \"Ich warte ___ dich.\"?",
+      "options": ["auf", "in", "an", "bei"],
+      "correct": "auf",
+      "explanation": "\"Warten auf\" takes the accusative case: \"Ich warte auf dich.\" (I’m waiting for you)."
+    },
+    {
+      "question": "Conjugate \"schlafen\" for \"du\".",
+      "options": ["schlafe", "schläfst", "schläft", "schlafen"],
+      "correct": "schläfst",
+      "explanation": "\"Schlafen\" (to sleep) conjugates to \"schläfst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Wir spielen morgen Fußball.",
+        "Wir morgen Fußball spielen.",
+        "Morgen wir Fußball spielen."
+      ],
+      "correct": "Wir spielen morgen Fußball.",
+      "explanation": "The verb \"spielen\" is in the second position, followed by time and object."
+    },
+    {
+      "question": "Choose the correct article for \"Tisch\" (masculine) in the dative case.",
+      "options": ["dem", "den", "der", "die"],
+      "correct": "dem",
+      "explanation": "\"Tisch\" is masculine, and the dative article is \"dem\"."
+    },
+    {
+      "question": "Conjugate \"kaufen\" for \"sie\" (singular).",
+      "options": ["kaufe", "kaufst", "kauft", "kaufen"],
+      "correct": "kauft",
+      "explanation": "\"Kaufen\" (to buy) conjugates to \"kauft\" for \"sie\" (she)."
+    },
+    {
+      "question": "Which case follows \"durch\"?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Accusative",
+      "explanation": "The preposition \"durch\" always takes the accusative case."
+    },
+    {
+      "question": "What is the correct form: \"Ihr ___ (laufen) schnell.\"?",
+      "options": ["laufe", "läufst", "läuft", "lauft"],
+      "correct": "lauft",
+      "explanation": "\"Laufen\" (to run) conjugates to \"lauft\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "question": "Choose the correct article for \"Hund\" (masculine) in the accusative case.",
+      "options": ["der", "die", "das", "den"],
+      "correct": "den",
+      "explanation": "\"Hund\" is masculine, and the accusative article is \"den\"."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Ich bin gestern gelaufen.",
+        "Ich gestern gelaufen bin.",
+        "Gestern ich gelaufen bin."
+      ],
+      "correct": "Ich bin gestern gelaufen.",
+      "explanation": "In perfect tense, the auxiliary \"bin\" is in the second position, with the participle \"gelaufen\" at the end."
+    },
+    {
+      "question": "Conjugate \"arbeiten\" for \"wir\".",
+      "options": ["arbeite", "arbeitest", "arbeitet", "arbeiten"],
+      "correct": "arbeiten",
+      "explanation": "\"Arbeiten\" (to work) conjugates to \"arbeiten\" for \"wir\" (we)."
+    },
+    {
+      "question": "Which preposition fits: \"Das Geschenk ist ___ meine Schwester.\"?",
+      "options": ["für", "von", "mit", "an"],
+      "correct": "für",
+      "explanation": "\"Für\" is used to indicate the recipient: \"Das Geschenk ist für meine Schwester.\" (The gift is for my sister)."
+    },
+    {
+      "question": "Choose the correct article for \"Lampe\" (feminine) in the dative case.",
+      "options": ["der", "die", "dem", "den"],
+      "correct": "der",
+      "explanation": "\"Lampe\" is feminine, and the dative article is \"der\"."
+    },
+    {
+      "question": "Conjugate \"helfen\" for \"du\".",
+      "options": ["helfe", "hilfst", "hilft", "helfen"],
+      "correct": "hilfst",
+      "explanation": "\"Helfen\" (to help) conjugates to \"hilfst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Er hat heute viel gearbeitet.",
+        "Er heute viel gearbeitet hat.",
+        "Heute er viel gearbeitet hat."
+      ],
+      "correct": "Er hat heute viel gearbeitet.",
+      "explanation": "The auxiliary \"hat\" is in the second position, with the participle \"gearbeitet\" at the end."
+    },
+    {
+      "question": "Which case follows \"nach\" (direction)?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Dative",
+      "explanation": "The preposition \"nach\" takes the dative case when indicating direction (e.g., \"nach Hause\")."
+    },
+    {
+      "question": "Conjugate \"sehen\" for \"sie\" (plural).",
+      "options": ["sehe", "siehst", "sieht", "sehen"],
+      "correct": "sehen",
+      "explanation": "\"Sehen\" (to see) conjugates to \"sehen\" for \"sie\" (they)."
+    },
+    {
+      "question": "Choose the correct article for \"Buch\" (neuter) in the dative case.",
+      "options": ["dem", "den", "der", "die"],
+      "correct": "dem",
+      "explanation": "\"Buch\" is neuter, and the dative article is \"dem\"."
+    },
+    {
+      "question": "What is the correct form: \"Ich ___ (wissen) die Antwort.\"?",
+      "options": ["weiß", "weißt", "weiß", "wissen"],
+      "correct": "weiß",
+      "explanation": "\"Wissen\" (to know) conjugates to \"weiß\" for \"ich\" (I)."
+    },
+    {
+      "question": "Which preposition fits: \"Ich fahre ___ Zug.\"?",
+      "options": ["mit", "in", "auf", "an"],
+      "correct": "mit",
+      "explanation": "\"Mit\" is used with modes of transport: \"Ich fahre mit dem Zug.\" (I travel by train)."
+    },
+    {
+      "question": "Conjugate \"denken\" for \"er\".",
+      "options": ["denke", "denkst", "denkt", "denken"],
+      "correct": "denkt",
+      "explanation": "\"Denken\" (to think) conjugates to \"denkt\" for \"er\" (he)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Sie kauft morgen ein Kleid.",
+        "Sie morgen ein Kleid kauft.",
+        "Morgen sie ein Kleid kauft."
+      ],
+      "correct": "Sie kauft morgen ein Kleid.",
+      "explanation": "The verb \"kauft\" is in the second position, followed by time and object."
+    },
+    {
+      "question": "Choose the correct article for \"Stadt\" (feminine) in the accusative case.",
+      "options": ["die", "das", "den", "dem"],
+      "correct": "die",
+      "explanation": "\"Stadt\" is feminine, and the accusative article is \"die\" (same as nominative)."
+    },
+    {
+      "question": "Conjugate \"spielen\" for \"ihr\".",
+      "options": ["spiele", "spielst", "spielt", "spielt"],
+      "correct": "spielt",
+      "explanation": "\"Spielen\" (to play) conjugates to \"spielt\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "question": "Which case follows \"um\" (time)?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Accusative",
+      "explanation": "The preposition \"um\" takes the accusative case when indicating time (e.g., \"um 8 Uhr\")."
+    },
+    {
+      "question": "What is the correct form: \"Wir ___ (treffen) uns später.\"?",
+      "options": ["treffe", "triffst", "trifft", "treffen"],
+      "correct": "treffen",
+      "explanation": "\"Treffen\" (to meet) conjugates to \"treffen\" for \"wir\" (we)."
+    },
+    {
+      "question": "Choose the correct article for \"Wald\" (masculine) in the dative case.",
+      "options": ["dem", "den", "der", "die"],
+      "correct": "dem",
+      "explanation": "\"Wald\" is masculine, and the dative article is \"dem\"."
+    },
+    {
+      "question": "Conjugate \"hören\" for \"du\".",
+      "options": ["höre", "hörst", "hört", "hören"],
+      "correct": "hörst",
+      "explanation": "\"Hören\" (to hear) conjugates to \"hörst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Ich habe am Wochenende geschlafen.",
+        "Ich am Wochenende geschlafen habe.",
+        "Am Wochenende ich geschlafen habe."
+      ],
+      "correct": "Ich habe am Wochenende geschlafen.",
+      "explanation": "The auxiliary \"habe\" is in the second position, with the participle \"geschlafen\" at the end."
+    },
+    {
+      "question": "Which preposition fits: \"Das Bild hängt ___ Wand.\"?",
+      "options": ["an", "auf", "in", "unter"],
+      "correct": "an",
+      "explanation": "\"An\" is used for vertical surfaces: \"Das Bild hängt an der Wand.\" (The picture hangs on the wall)."
+    },
+    {
+      "question": "Conjugate \"finden\" for \"sie\" (singular).",
+      "options": ["finde", "findest", "findet", "finden"],
+      "correct": "findet",
+      "explanation": "\"Finden\" (to find) conjugates to \"findet\" for \"sie\" (she)."
+    },
+    {
+      "question": "Choose the correct article for \"See\" (masculine) in the accusative case.",
+      "options": ["der", "die", "das", "den"],
+      "correct": "den",
+      "explanation": "\"See\" is masculine, and the accusative article is \"den\"."
+    },
+    {
+      "question": "What is the correct form: \"Er ___ (verstehen) das Problem.\"?",
+      "options": ["verstehe", "verstehst", "versteht", "verstehen"],
+      "correct": "versteht",
+      "explanation": "\"Verstehen\" (to understand) conjugates to \"versteht\" for \"er\" (he)."
+    },
+    {
+      "question": "Which case follows \"über\" (position)?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Dative",
+      "explanation": "The preposition \"über\" takes the dative case when indicating position (e.g., \"über dem Tisch\")."
+    },
+    {
+      "question": "Conjugate \"lachen\" for \"wir\".",
+      "options": ["lache", "lachst", "lacht", "lachen"],
+      "correct": "lachen",
+      "explanation": "\"Lachen\" (to laugh) conjugates to \"lachen\" for \"wir\" (we)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Sie ist gestern angekommen.",
+        "Sie gestern angekommen ist.",
+        "Gestern sie angekommen ist."
+      ],
+      "correct": "Sie ist gestern angekommen.",
+      "explanation": "The auxiliary \"ist\" is in the second position, with the participle \"angekommen\" at the end."
+    },
+    {
+      "question": "Choose the correct article for \"Sonne\" (feminine) in the dative case.",
+      "options": ["der", "die", "dem", "den"],
+      "correct": "der",
+      "explanation": "\"Sonne\" is feminine, and the dative article is \"der\"."
+    },
+    {
+      "question": "Conjugate \"fragen\" for \"du\".",
+      "options": ["frage", "fragst", "fragt", "fragen"],
+      "correct": "fragst",
+      "explanation": "\"Fragen\" (to ask) conjugates to \"fragst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "Which preposition fits: \"Ich lerne ___ Schule.\"?",
+      "options": ["in", "auf", "an", "bei"],
+      "correct": "in",
+      "explanation": "\"In\" is used with institutions like school: \"Ich lerne in der Schule.\" (I learn in school)."
+    },
+    {
+      "question": "What is the correct form: \"Wir ___ (schwimmen) im See.\"?",
+      "options": ["schwimme", "schwimmst", "schwimmt", "schwimmen"],
+      "correct": "schwimmen",
+      "explanation": "\"Schwimmen\" (to swim) conjugates to \"schwimmen\" for \"wir\" (we)."
+    },
+    {
+      "question": "Choose the correct article for \"Fluss\" (masculine) in the accusative case.",
+      "options": ["der", "die", "das", "den"],
+      "correct": "den",
+      "explanation": "\"Fluss\" is masculine, and the accusative article is \"den\"."
+    },
+    {
+      "question": "Conjugate \"öffnen\" for \"er\".",
+      "options": ["öffne", "öffnest", "öffnet", "öffnen"],
+      "correct": "öffnet",
+      "explanation": "\"Öffnen\" (to open) conjugates to \"öffnet\" for \"er\" (he)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Ich gehe jeden Morgen zur Arbeit.",
+        "Ich jeden Morgen zur Arbeit gehe.",
+        "Jeden Morgen ich zur Arbeit gehe."
+      ],
+      "correct": "Ich gehe jeden Morgen zur Arbeit.",
+      "explanation": "The verb \"gehe\" is in the second position, followed by time and destination."
+    },
+    {
+      "question": "Which case follows \"zwischen\"?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Dative",
+      "explanation": "The preposition \"zwischen\" takes the dative case (e.g., \"zwischen den Häusern\")."
+    },
+    {
+      "question": "Conjugate \"schließen\" for \"sie\" (plural).",
+      "options": ["schließe", "schließt", "schließt", "schließen"],
+      "correct": "schließen",
+      "explanation": "\"Schließen\" (to close) conjugates to \"schließen\" for \"sie\" (they)."
+    },
+    {
+      "question": "Choose the correct article for \"Mond\" (masculine) in the dative case.",
+      "options": ["dem", "den", "der", "die"],
+      "correct": "dem",
+      "explanation": "\"Mond\" is masculine, and the dative article is \"dem\"."
+    },
+    {
+      "question": "What is the correct form: \"Du ___ (lieben) mich.\"?",
+      "options": ["liebe", "liebst", "liebt", "lieben"],
+      "correct": "liebst",
+      "explanation": "\"Lieben\" (to love) conjugates to \"liebst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "Which preposition fits: \"Die Katze sitzt ___ Tisch.\"?",
+      "options": ["auf", "in", "an", "unter"],
+      "correct": "auf",
+      "explanation": "\"Auf\" is used for surfaces: \"Die Katze sitzt auf dem Tisch.\" (The cat sits on the table)."
+    },
+    {
+      "question": "Conjugate \"verlieren\" for \"wir\".",
+      "options": ["verliere", "verlierst", "verliert", "verlieren"],
+      "correct": "verlieren",
+      "explanation": "\"Verlieren\" (to lose) conjugates to \"verlieren\" for \"wir\" (we)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Er hat gestern ein Auto gekauft.",
+        "Er gestern ein Auto gekauft hat.",
+        "Gestern er ein Auto gekauft hat."
+      ],
+      "correct": "Er hat gestern ein Auto gekauft.",
+      "explanation": "The auxiliary \"hat\" is in the second position, with the participle \"gekauft\" at the end."
+    },
+    {
+      "question": "Choose the correct article for \"Schule\" (feminine) in the accusative case.",
+      "options": ["die", "das", "den", "dem"],
+      "correct": "die",
+      "explanation": "\"Schule\" is feminine, and the accusative article is \"die\" (same as nominative)."
+    },
+    {
+      "question": "Conjugate \"gewinnen\" for \"er\".",
+      "options": ["gewinne", "gewinnst", "gewinnt", "gewinnen"],
+      "correct": "gewinnt",
+      "explanation": "\"Gewinnen\" (to win) conjugates to \"gewinnt\" for \"er\" (he)."
+    },
+    {
+      "question": "Which case follows \"gegen\"?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Accusative",
+      "explanation": "The preposition \"gegen\" always takes the accusative case."
+    },
+    {
+      "question": "What is the correct form: \"Ihr ___ (suchen) das Buch.\"?",
+      "options": ["suche", "suchst", "sucht", "sucht"],
+      "correct": "sucht",
+      "explanation": "\"Suchen\" (to search) conjugates to \"sucht\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "question": "Choose the correct article for \"Berg\" (masculine) in the dative case.",
+      "options": ["dem", "den", "der", "die"],
+      "correct": "dem",
+      "explanation": "\"Berg\" is masculine, and the dative article is \"dem\"."
+    },
+    {
+      "question": "Conjugate \"reisen\" for \"sie\" (singular).",
+      "options": ["reise", "reist", "reist", "reisen"],
+      "correct": "reist",
+      "explanation": "The verb \"reisen\" (to travel) conjugates to \"reist\" for \"sie\" (she)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Ich werde morgen kommen.",
+        "Ich morgen kommen werde.",
+        "Morgen ich kommen werde."
+      ],
+      "correct": "Ich werde morgen kommen.",
+      "explanation": "In future tense, the auxiliary \"werde\" is in the second position, with the infinitive \"kommen\" at the end."
+    },
+    {
+      "question": "Which preposition fits: \"Ich bleibe ___ Hause.\"?",
+      "options": ["zu", "in", "an", "bei"],
+      "correct": "zu",
+      "explanation": "The fixed phrase is \"zu Hause\": \"Ich bleibe zu Hause.\" (I stay at home)."
+    },
+    {
+      "question": "Conjugate \"bleiben\" for \"du\".",
+      "options": ["bleibe", "bleibst", "bleibt", "bleiben"],
+      "correct": "bleibst",
+      "explanation": "\"Bleiben\" (to stay) conjugates to \"bleibst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "Choose the correct article for \"Meer\" (neuter) in the dative case.",
+      "options": ["dem", "den", "der", "die"],
+      "correct": "dem",
+      "explanation": "\"Meer\" is neuter, and the dative article is \"dem\"."
+    },
+    {
+      "question": "What is the correct form: \"Wir ___ (verlassen) die Stadt.\"?",
+      "options": ["verlasse", "verlässt", "verlässt", "verlassen"],
+      "correct": "verlassen",
+      "explanation": "\"Verlassen\" (to leave) conjugates to \"verlassen\" for \"wir\" (we)."
+    },
+    {
+      "question": "Which case follows \"ohne\"?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Accusative",
+      "explanation": "The preposition \"ohne\" always takes the accusative case."
+    },
+    {
+      "question": "Conjugate \"vergessen\" for \"er\".",
+      "options": ["vergesse", "vergisst", "vergisst", "vergessen"],
+      "correct": "vergisst",
+      "explanation": "\"Vergessen\" (to forget) conjugates to \"vergisst\" for \"er\" (he)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Sie hat heute Morgen geduscht.",
+        "Sie heute Morgen geduscht hat.",
+        "Heute Morgen sie geduscht hat."
+      ],
+      "correct": "Sie hat heute Morgen geduscht.",
+      "explanation": "The auxiliary \"hat\" is in the second position, with the participle \"geduscht\" at the end."
+    },
+    {
+      "question": "Choose the correct article for \"Familie\" (feminine) in the accusative case.",
+      "options": ["die", "das", "den", "dem"],
+      "correct": "die",
+      "explanation": "\"Familie\" is feminine, and the accusative article is \"die\" (same as nominative)."
+    },
+    {
+      "question": "Conjugate \"erinnern\" for \"du\".",
+      "options": ["erinnere", "erinnerst", "erinnert", "erinnern"],
+      "correct": "erinnerst",
+      "explanation": "\"Erinnern\" (to remember) conjugates to \"erinnerst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "Which preposition fits: \"Ich gehe ___ Park.\"?",
+      "options": ["in", "auf", "an", "bei"],
+      "correct": "in",
+      "explanation": "\"In\" is used with enclosed spaces like a park: \"Ich gehe in den Park.\" (I go to the park)."
+    },
+    {
+      "question": "What is the correct form: \"Er ___ (springen) hoch.\"?",
+      "options": ["springe", "springst", "springt", "springen"],
+      "correct": "springt",
+      "explanation": "\"Springen\" (to jump) conjugates to \"springt\" for \"er\" (he)."
+    },
+    {
+      "question": "Choose the correct article for \"Vogel\" (masculine) in the dative case.",
+      "options": ["dem", "den", "der", "die"],
+      "correct": "dem",
+      "explanation": "\"Vogel\" is masculine, and the dative article is \"dem\"."
+    },
+    {
+      "question": "Conjugate \"fliegen\" for \"wir\".",
+      "options": ["fliege", "fliegst", "fliegt", "fliegen"],
+      "correct": "fliegen",
+      "explanation": "\"Fliegen\" (to fly) conjugates to \"fliegen\" for \"wir\" (we)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Ich werde nächste Woche reisen.",
+        "Ich nächste Woche reisen werde.",
+        "Nächste Woche ich reisen werde."
+      ],
+      "correct": "Ich werde nächste Woche reisen.",
+      "explanation": "In future tense, the auxiliary \"werde\" is in the second position, with the infinitive \"reisen\" at the end."
+    },
+    {
+      "question": "Which case follows \"vor\" (position)?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Dative",
+      "explanation": "The preposition \"vor\" takes the dative case when indicating position (e.g., \"vor dem Haus\")."
+    },
+    {
+      "question": "Conjugate \"stehen\" for \"du\".",
+      "options": ["stehe", "stehst", "steht", "stehen"],
+      "correct": "stehst",
+      "explanation": "\"Stehen\" (to stand) conjugates to \"stehst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "Choose the correct article for \"Straße\" (feminine) in the accusative case.",
+      "options": ["die", "das", "den", "dem"],
+      "correct": "die",
+      "explanation": "\"Straße\" is feminine, and the accusative article is \"die\" (same as nominative)."
+    },
+    {
+      "question": "What is the correct form: \"Sie ___ (sitzen) am Tisch.\"?",
+      "options": ["sitze", "sitzst", "sitzt", "sitzen"],
+      "correct": "sitzt",
+      "explanation": "\"Sitzen\" (to sit) conjugates to \"sitzt\" for \"sie\" (she)."
+    },
+    {
+      "question": "Which preposition fits: \"Ich lege das Buch ___ Tisch.\"?",
+      "options": ["auf", "in", "an", "unter"],
+      "correct": "auf",
+      "explanation": "\"Auf\" is used for surfaces: \"Ich lege das Buch auf den Tisch.\" (I put the book on the table)."
+    },
+    {
+      "question": "Conjugate \"aufstehen\" for \"wir\".",
+      "options": ["stehe auf", "stehst auf", "steht auf", "stehen auf"],
+      "correct": "stehen auf",
+      "explanation": "\"Aufstehen\" (to get up) conjugates to \"stehen auf\" for \"wir\" (we)."
+    },
+    {
+      "question": "What is the correct word order?",
+      "options": [
+        "Er ist heute Morgen aufgestanden.",
+        "Er heute Morgen aufgestanden ist.",
+        "Heute Morgen er aufgestanden ist."
+      ],
+      "correct": "Er ist heute Morgen aufgestanden.",
+      "explanation": "The auxiliary \"ist\" is in the second position, with the participle \"aufgestanden\" at the end."
+    },
+    {
+      "question": "Choose the correct article for \"Fenster\" (neuter) in the dative case.",
+      "options": ["dem", "den", "der", "die"],
+      "correct": "dem",
+      "explanation": "\"Fenster\" is neuter, and the dative article is \"dem\"."
+    },
+    {
+      "question": "Conjugate \"kochen\" for \"du\".",
+      "options": ["koche", "kochst", "kocht", "kochen"],
+      "correct": "kochst",
+      "explanation": "\"Kochen\" (to cook) conjugates to \"kochst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "question": "Which case follows \"neben\"?",
+      "options": ["Nominative", "Accusative", "Dative", "Genitive"],
+      "correct": "Dative",
+      "explanation": "The preposition \"neben\" takes the dative case (e.g., \"neben dem Haus\")."
+    },
+    {
+      "question": "What is the correct form: \"Sie ___ (trinken) Wasser.\"?",
+      "options": ["trinke", "trinkst", "trinkt", "trinken"],
+      "correct": "trinkt",
+      "explanation": "\"Trinken\" (to drink) conjugates to \"trinkt\" for \"sie\" (she)."
+    },
+    {
+      "question": "Choose the correct article for \"Tür\" (feminine) in the accusative case.",
+      "options": ["die", "das", "den", "dem"],
+      "correct": "die",
+      "explanation": "\"Tür\" is feminine, and the accusative article is \"die\" (same as nominative)."
+    },
+    {
+      "question": "Conjugate \"essen\" for \"ihr\".",
+      "options": ["esse", "isst", "esst", "essen"],
+      "correct": "esst",
+      "explanation": "\"Essen\" (to eat) conjugates to \"esst\" for \"ihr\" (you, plural informal)."
+    }
+]

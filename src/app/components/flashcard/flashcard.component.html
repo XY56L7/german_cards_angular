@@ -1,0 +1,264 @@
+<!-- src/app/components/flashcard/flashcard.component.html -->
+<div class="app-container" [ngClass]="{'dark-mode': isDarkMode}">
+  <div class="ice-cream-floating" *ngFor="let i of [1,2,3,4,5]">
+    <div class="floating-emoji">🍦</div>
+  </div>
+  
+  <div class="container py-4">
+    <div class="header-section text-center mb-5">
+      <h2 class="app-title">
+        <span class="title-accent">Deutsch</span> 
+        <span class="ice-cream-icon-title">🍦</span> 
+        <span class="title-main">Eiswörterbuch</span>
+      </h2>
+      
+      <div class="theme-intro text-center mb-3">
+        <p class="theme-explanation">Lerne deutsche Wörter mit leckeren Eissorten! Jede Wortkarte hat ein Eisthema.</p>
+        <p class="theme-explanation-en">Learn German words with delicious ice cream flavors! Each word card has an ice cream theme.</p>
+      </div>
+      
+      <div class="stats-container">
+        <div class="points-badge">
+          <span class="points-value">{{ points }}</span>
+          <span class="points-label">PUNKTE</span>
+        </div>
+        
+        <div class="level-badge" *ngIf="points > 0">
+          <span class="level-value">{{ getLevelNumber() }}</span>
+          <span class="level-label">NIVEAU</span>
+        </div>
+      </div>
+      
+      <div class="theme-switcher">
+        <button class="btn theme-btn" (click)="toggleTheme()">
+          <span *ngIf="isDarkMode" class="theme-icon">☀️</span>
+          <span *ngIf="!isDarkMode" class="theme-icon">🌙</span>
+          <span class="theme-text">{{ isDarkMode ? 'Tag Modus' : 'Nacht Modus' }}</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="achievement-container" *ngIf="points >= 50">
+      <div class="achievement-badge" @achievementAnimation>
+        <div class="achievement-icon">🏆</div>
+        <div class="achievement-info">
+          <div class="achievement-title">Eismeister!</div>
+          <div class="achievement-desc">Sie haben 50 Punkte verdient</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="progress-container mb-5">
+      <div class="progress-label">
+        <span class="progress-title">Fortschritt</span>
+        <span class="progress-percent">{{ progress }}%</span>
+      </div>
+      <div class="progress custom-progress" @progressAnimation>
+        <div class="progress-bar" role="progressbar" 
+             [style.width]="progress + '%'" 
+             [attr.aria-valuenow]="progress" 
+             aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+    
+    <div class="cards-grid">
+      <div class="card-container" *ngFor="let card of flashcards; let i = index" @cardAnimation>
+        <div class="difficulty-tag" [ngClass]="getDifficultyClass(i)">
+          {{ getDifficulty(i) }}
+        </div>
+        
+        <div class="flashcard" (click)="flipCard(i)" [ngClass]="{'flipped': card.flipped}">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="ice-cone">
+                  <div class="ice-cream-icon" [ngClass]="'flavor-' + (i % 5 + 1)">🍦</div>
+                </div>
+                <h3 class="german-text">{{ card.german }}</h3>
+                <div class="flavor-tag" [ngClass]="getFlavorClass(i)">{{ getFlavorTag(i) }} Eis</div>
+                
+                <div class="example-sentence front-example">
+                  <div class="sentence-label">BEISPIEL:</div>
+                  <div class="sentence-text">{{ getExampleSentence(i) }}</div>
+                </div>
+                
+                <button class="btn audio-btn" (click)="playAudio(card.german, $event)">
+                  <span class="audio-icon">🔊</span>
+                </button>
+                <div class="card-number">{{ (currentPage - 1) * itemsPerPage + i + 1 }}/{{ allFlashcards.length }}</div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <div class="ice-cream-icon back-icon">🍨</div>
+                <h3 class="english-text">{{ card.english }}</h3>
+                
+                <div class="example-sentence-container">
+                  <div class="example-sentence">
+                    <div class="sentence-label">BEISPIEL:</div>
+                    <div class="sentence-text">{{ getExampleSentence(i) }}</div>
+                  </div>
+                  
+                  <div class="example-translation">
+                    <div class="sentence-label">ÜBERSETZUNG:</div>
+                    <div class="sentence-text">{{ getExampleTranslation(i) }}</div>
+                  </div>
+                </div>
+                
+                <div class="card-action-buttons">
+                  <button class="btn audio-btn" (click)="playAudio(card.english, $event)">
+                    <span class="audio-icon">🔊</span>
+                  </button>
+                  <button class="btn mark-learned-btn" 
+                          (click)="markAsLearned(i, $event)" 
+                          *ngIf="!card.learned">
+                    <span class="check-icon">✓</span> Gelernt
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pagination-container" *ngIf="totalPages > 1">
+      <div class="pagination">
+        <button class="pagination-btn" (click)="previousPage()" [disabled]="currentPage === 1">
+          <span class="pagination-icon">◀</span>
+        </button>
+        
+        <ng-container *ngFor="let page of getPageNumbers()">
+          <button class="pagination-btn" 
+                  [class.active]="page === currentPage"
+                  (click)="goToPage(page)">
+            {{ page }}
+          </button>
+        </ng-container>
+        
+        <button class="pagination-btn" (click)="nextPage()" [disabled]="currentPage === totalPages">
+          <span class="pagination-icon">▶</span>
+        </button>
+      </div>
+      
+      <div class="pagination-info">
+        Seite {{ currentPage }} von {{ totalPages }}
+      </div>
+    </div>
+    
+    <div class="controls-container">
+      <button class="btn control-btn shuffle-btn" (click)="shuffleCards()">
+        <span class="control-icon">🔄</span>
+        <span class="control-text">Karten mischen</span>
+      </button>
+      
+      <button class="btn control-btn reset-btn" (click)="resetProgress()" *ngIf="progress > 0">
+        <span class="control-icon">🔄</span>
+        <span class="control-text">Neu starten</span>
+      </button>
+      
+      <button class="btn control-btn filter-btn" (click)="toggleFilter()">
+        <span class="control-icon">🔍</span>
+        <span class="control-text">{{ showOnlyUnlearned ? 'Alle anzeigen' : 'Nur unbekannte' }}</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .theme-explanation {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+  
+  .theme-explanation-en {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+    font-style: italic;
+  }
+  
+  .dark-mode .theme-explanation,
+  .dark-mode .theme-explanation-en {
+    color: #aaa;
+  }
+  
+  .pagination-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pagination {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pagination-btn {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+  }
+  
+  .pagination-btn.active {
+    background-color: #1e3a8a;
+    color: white;
+    border-color: #1e3a8a;
+  }
+  
+  .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination-icon {
+    font-size: 12px;
+  }
+  
+  .pagination-info {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .dark-mode .pagination-btn {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #ddd;
+  }
+  
+  .dark-mode .pagination-btn:hover:not(:disabled) {
+    background-color: #444;
+  }
+  
+  .dark-mode .pagination-btn.active {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+  }
+  
+  .dark-mode .pagination-info {
+    color: #aaa;
+  }
+</style>

@@ -1,0 +1,298 @@
+<div class="app-container" [ngClass]="{'dark-mode': isDarkMode}">
+  <div class="sentence-floating" *ngFor="let i of [1,2,3,4,5]">
+    <div class="floating-emoji">📝</div>
+  </div>
+  
+  <div class="container py-4">
+    <div class="header-section text-center mb-5">
+      <h2 class="app-title">
+        <span class="title-accent">Deutsche</span> 
+        <span class="sentence-icon-title">📝</span> 
+        <span class="title-main">Satzmeister</span>
+      </h2>
+      
+      <div class="theme-intro text-center mb-3">
+        <p class="theme-explanation">Üben Sie deutsche Sätze, indem Sie die fehlenden Wörter einsetzen. Füllen Sie die Lücken aus!</p>
+        <p class="theme-explanation-en">Practice German sentences by filling in the missing words. Complete the blanks!</p>
+      </div>
+      
+      <div class="stats-container">
+        <div class="points-badge">
+          <span class="points-value">{{ points }}</span>
+          <span class="points-label">PUNKTE</span>
+        </div>
+        
+        <div class="level-badge" *ngIf="points > 0">
+          <span class="level-value">{{ getLevelNumber() }}</span>
+          <span class="level-label">NIVEAU</span>
+        </div>
+      </div>
+      
+      <div class="theme-switcher">
+        <button class="btn theme-btn" (click)="toggleTheme()">
+          <span *ngIf="isDarkMode" class="theme-icon">☀️</span>
+          <span *ngIf="!isDarkMode" class="theme-icon">🌙</span>
+          <span class="theme-text">{{ isDarkMode ? 'Tag Modus' : 'Nacht Modus' }}</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="achievement-container" *ngIf="points >= 50">
+      <div class="achievement-badge" @achievementAnimation>
+        <div class="achievement-icon">🏆</div>
+        <div class="achievement-info">
+          <div class="achievement-title">Satzmeister!</div>
+          <div class="achievement-desc">Sie haben 50 Punkte verdient</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="progress-container mb-5">
+      <div class="progress-label">
+        <span class="progress-title">Fortschritt</span>
+        <span class="progress-percent">{{ getProgressPercent() }}%</span>
+      </div>
+      <div class="progress custom-progress" @progressAnimation>
+        <div class="progress-bar" role="progressbar" 
+             [style.width]="getProgressPercent() + '%'" 
+             [attr.aria-valuenow]="getProgressPercent()" 
+             aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+    
+    <div class="sentences-grid">
+      <div class="sentence-card" *ngFor="let sentence of sentences; let i = index" @fadeIn>
+        <div class="sentence-difficulty" [ngClass]="getDifficultyClass(i)">
+          {{ getDifficulty(i) }}
+        </div>
+        
+        <div class="sentence-content">
+          <div class="sentence-number">{{ (currentPage - 1) * itemsPerPage + i + 1 }}/{{ allSentences.length }}</div>
+          
+          <div class="sentence-text" [innerHTML]="getSentenceDisplay(sentence.incomplete)">
+          </div>
+          
+          <div class="hint-container" *ngIf="!showHints[getActualIndex(i)] && !results[getActualIndex(i)]">
+            <button class="btn hint-btn" (click)="toggleHint(i, $event)">
+              <span class="hint-icon">💡</span>
+              <span class="hint-text">Tipp anzeigen</span>
+            </button>
+          </div>
+          
+          <div class="hint-box" *ngIf="showHints[getActualIndex(i)] && !results[getActualIndex(i)]" @fadeIn>
+            <div class="hint-title">TIPP:</div>
+            <div class="hint-content">{{ getHint(i) }}</div>
+          </div>
+          
+          <div class="input-container" [ngClass]="{'has-result': results[getActualIndex(i)] !== undefined}">
+            <input type="text" 
+                   class="form-control sentence-input" 
+                   [(ngModel)]="answers[getActualIndex(i)]" 
+                   placeholder="Ihre Antwort hier eingeben..." 
+                   (keyup.enter)="checkAnswer(i)"
+                   [disabled]="results[getActualIndex(i)] === true" />
+            
+            <button class="btn check-btn" 
+                    (click)="checkAnswer(i)"
+                    [disabled]="results[getActualIndex(i)] === true">
+              <span class="check-icon">✓</span>
+              <span class="check-text">Prüfen</span>
+            </button>
+          </div>
+          
+          <div class="result-container" *ngIf="results[getActualIndex(i)] !== undefined" @resultAnimation>
+            <div class="result-box" [ngClass]="{'success': results[getActualIndex(i)], 'error': !results[getActualIndex(i)]}">
+              <div class="result-icon">
+                <span *ngIf="results[getActualIndex(i)]">✅</span>
+                <span *ngIf="!results[getActualIndex(i)]">❌</span>
+              </div>
+              <div class="result-message">
+                <div class="result-title">
+                  {{ results[getActualIndex(i)] ? 'Perfekt! +10 Punkte' : 'Nicht ganz...' }}
+                </div>
+                <div class="result-detail" *ngIf="!results[getActualIndex(i)]">
+                  Versuchen Sie es noch einmal mit einer korrekten Antwort.
+                </div>
+                <div class="correct-answer" *ngIf="!results[getActualIndex(i)]">
+                  <strong>Richtige Antwort:</strong> {{ sentence.correct }}
+                </div>
+              </div>
+              <div class="result-actions" *ngIf="!results[getActualIndex(i)]">
+                <button class="btn retry-btn" (click)="retryAnswer(i)">
+                  <span class="retry-icon">🔄</span>
+                  <span class="retry-text">Wiederholen</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pagination-container" *ngIf="totalPages > 1">
+      <div class="pagination">
+        <button class="pagination-btn" (click)="previousPage()" [disabled]="currentPage === 1">
+          <span class="pagination-icon">◀</span>
+        </button>
+        
+        <ng-container *ngFor="let page of getPageNumbers()">
+          <button class="pagination-btn" 
+                  [class.active]="page === currentPage"
+                  (click)="goToPage(page)">
+            {{ page }}
+          </button>
+        </ng-container>
+        
+        <button class="pagination-btn" (click)="nextPage()" [disabled]="currentPage === totalPages">
+          <span class="pagination-icon">▶</span>
+        </button>
+      </div>
+      
+      <div class="pagination-info">
+        Seite {{ currentPage }} von {{ totalPages }}
+      </div>
+    </div>
+    
+    <div class="controls-container">
+      <button class="btn control-btn shuffle-btn" (click)="shuffleSentences()">
+        <span class="control-icon">🔄</span>
+        <span class="control-text">Sätze mischen</span>
+      </button>
+      
+      <button class="btn control-btn reset-btn" (click)="resetProgress()" *ngIf="getProgressPercent() > 0">
+        <span class="control-icon">🔄</span>
+        <span class="control-text">Neu starten</span>
+      </button>
+      
+      <button class="btn control-btn filter-btn" (click)="toggleFilter()">
+        <span class="control-icon">🔍</span>
+        <span class="control-text">{{ showOnlyUnanswered ? 'Alle anzeigen' : 'Nur ungelöste' }}</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .blank {
+    display: inline-block;
+    min-width: 60px;
+    border-bottom: 2px solid #1e3a8a;
+    text-align: center;
+    margin: 0 5px;
+    position: relative;
+  }
+  
+  .dark-mode .blank {
+    border-bottom-color: #4f46e5;
+  }
+  
+  .blank:hover {
+    background-color: rgba(30, 58, 138, 0.1);
+  }
+  
+  .dark-mode .blank:hover {
+    background-color: rgba(79, 70, 229, 0.1);
+  }
+  
+  .theme-explanation {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+  
+  .theme-explanation-en {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+    font-style: italic;
+  }
+  
+  .dark-mode .theme-explanation,
+  .dark-mode .theme-explanation-en {
+    color: #aaa;
+  }
+  
+  .sentence-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pagination-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pagination {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pagination-btn {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+  }
+  
+  .pagination-btn.active {
+    background-color: #1e3a8a;
+    color: white;
+    border-color: #1e3a8a;
+  }
+  
+  .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination-icon {
+    font-size: 12px;
+  }
+  
+  .pagination-info {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .dark-mode .pagination-btn {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #ddd;
+  }
+  
+  .dark-mode .pagination-btn:hover:not(:disabled) {
+    background-color: #444;
+  }
+  
+  .dark-mode .pagination-btn.active {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+  }
+  
+  .dark-mode .pagination-info {
+    color: #aaa;
+  }
+</style>

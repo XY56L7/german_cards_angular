@@ -1,0 +1,12 @@
+[
+    {
+      "incomplete": "Ich ___ (to be) ein Student.",
+      "correct": "Ich bin ein Student.",
+      "explanation": "In German, \"to be\" is \"sein\". For \"ich\" (I), it conjugates to \"bin\"."
+    },
+    {
+      "incomplete": "Wir ___ (to go) ins Kino.",
+      "correct": "Wir gehen ins Kino.",
+      "explanation": "The verb \"gehen\" (to go) conjugates to \"gehen\" for \"wir\" (we)."
+    }
+  ]

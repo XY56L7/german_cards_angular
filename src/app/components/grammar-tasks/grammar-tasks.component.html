@@ -1,0 +1,340 @@
+<div class="app-container" [ngClass]="{'dark-mode': isDarkMode}">
+  <div class="grammar-floating">
+    <div class="floating-emoji">📝</div>
+    <div class="floating-emoji">🔤</div>
+    <div class="floating-emoji">📚</div>
+    <div class="floating-emoji">🇩🇪</div>
+    <div class="floating-emoji">📖</div>
+  </div>
+
+  <div class="container">
+    <header class="header-section mt-4">
+      <div class="app-title">
+        <span class="grammar-icon-title">🧠</span>
+        <span class="title-accent">Grammatik</span>
+        <span class="title-main">meister</span>
+      </div>
+      
+      <div class="theme-intro text-center mb-3">
+        <p class="theme-explanation">Üben Sie deutsche Grammatik mit vielfältigen Aufgaben! Wählen Sie die richtige Antwort aus.</p>
+        <p class="theme-explanation-en">Practice German grammar with various exercises! Choose the correct answer.</p>
+      </div>
+
+      <div class="stats-container">
+        <div class="points-badge">
+          <span class="points-value">{{ totalPoints }}</span>
+          <span class="points-label">PUNKTE</span>
+        </div>
+        <div class="level-badge">
+          <span class="level-value">{{ currentLevel }}</span>
+          <span class="level-label">STUFE</span>
+        </div>
+      </div>
+
+      <div class="theme-switcher text-center">
+        <button (click)="toggleTheme()" class="theme-btn">
+          <span class="theme-icon" *ngIf="isDarkMode">☀️</span>
+          <span class="theme-icon" *ngIf="!isDarkMode">🌙</span>
+          <span class="theme-text">{{ isDarkMode ? 'Licht Modus' : 'Dunkel Modus' }}</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="achievement-container" *ngIf="totalPoints >= 50 && showAchievement">
+      <div class="achievement-badge">
+        <div class="achievement-icon">🏆</div>
+        <div class="achievement-info">
+          <div class="achievement-title">Grammatik-Champion!</div>
+          <div class="achievement-desc">Du hast 50 Punkte erreicht! Mach weiter so!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-label">
+        <span class="progress-title">Fortschritt</span>
+        <span class="progress-percent">{{ progressPercentage }}%</span>
+      </div>
+      <div class="custom-progress">
+        <div class="progress-bar" [style.width.%]="progressPercentage"></div>
+      </div>
+    </div>
+
+    <div class="tasks-grid">
+      <div class="task-card" *ngFor="let task of displayedTasks; let i = index">
+        <div class="task-difficulty" [ngClass]="getDifficultyClass(task.difficulty)">
+          {{ task.difficulty }}
+        </div>
+        <div class="task-content">
+          <div class="task-number">Aufgabe {{ i + 1 }}</div>
+          <div class="task-text">{{ task.task }}</div>
+
+          <div class="options-container" [ngClass]="{'disabled': results[getActualIndex(i)] !== undefined}">
+            <div 
+              *ngFor="let option of task.options; let j = index" 
+              class="option" 
+              [ngClass]="{
+                'selected': selectedAnswers[getActualIndex(i)] === j,
+                'correct': results[getActualIndex(i)] === true && selectedAnswers[getActualIndex(i)] === j,
+                'incorrect': results[getActualIndex(i)] === false && selectedAnswers[getActualIndex(i)] === j
+              }"
+              (click)="selectAnswer(i, j)">
+              <div class="option-marker">{{ ['A', 'B', 'C', 'D'][j] }}</div>
+              <div class="option-text">{{ option }}</div>
+              <div class="option-indicator" *ngIf="results[getActualIndex(i)] !== undefined">
+                <span *ngIf="j === task.correctAnswer" class="correct-mark">✓</span>
+                <span *ngIf="results[getActualIndex(i)] === false && selectedAnswers[getActualIndex(i)] === j" class="incorrect-mark">✗</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="action-container" *ngIf="selectedAnswers[getActualIndex(i)] !== undefined && results[getActualIndex(i)] === undefined">
+            <button class="check-btn" (click)="checkAnswer(i)">
+              <span class="check-icon">✓</span> Antwort prüfen
+            </button>
+          </div>
+
+          <div class="result-container" *ngIf="results[getActualIndex(i)] !== undefined">
+            <div class="result-box" [ngClass]="results[getActualIndex(i)] ? 'success' : 'error'">
+              <div class="result-icon">
+                <span *ngIf="results[getActualIndex(i)]" class="success-icon">✅</span>
+                <span *ngIf="!results[getActualIndex(i)]" class="error-icon">❌</span>
+              </div>
+              <div class="result-message">
+                <div class="result-title">{{ results[getActualIndex(i)] ? 'Richtig!' : 'Leider falsch.' }}</div>
+                <div class="result-detail" *ngIf="results[getActualIndex(i)]">
+                  Super gemacht! Du hast die richtige Antwort gewählt.
+                </div>
+                <div class="result-detail" *ngIf="!results[getActualIndex(i)]">
+                  Die richtige Antwort wäre: {{ task.options[task.correctAnswer] }}.
+                </div>
+              </div>
+              <div class="result-actions" *ngIf="!results[getActualIndex(i)]">
+                <button class="retry-btn" (click)="retryAnswer(i)">
+                  <span class="retry-icon">🔄</span>
+                  <span class="retry-text">Wiederholen</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pagination-container" *ngIf="totalPages > 1">
+      <div class="pagination">
+        <button class="pagination-btn" (click)="previousPage()" [disabled]="currentPage === 1">
+          <span class="pagination-icon">◀</span>
+        </button>
+        
+        <ng-container *ngFor="let page of getPageNumbers()">
+          <button class="pagination-btn" 
+                  [class.active]="page === currentPage"
+                  (click)="goToPage(page)">
+            {{ page }}
+          </button>
+        </ng-container>
+        
+        <button class="pagination-btn" (click)="nextPage()" [disabled]="currentPage === totalPages">
+          <span class="pagination-icon">▶</span>
+        </button>
+      </div>
+      
+      <div class="pagination-info">
+        Seite {{ currentPage }} von {{ totalPages }}
+      </div>
+    </div>
+
+    <div class="controls-container">
+      <button class="control-btn shuffle-btn" (click)="shuffleTasks()">
+        <span class="control-icon">🔄</span>
+        <span class="control-text">Aufgaben mischen</span>
+      </button>
+      <button class="control-btn filter-btn" (click)="showUnansweredOnly()">
+        <span class="control-icon">🔍</span>
+        <span class="control-text">{{ showingUnansweredOnly ? 'Alle anzeigen' : 'Nur unbeantwortete' }}</span>
+      </button>
+      <button class="control-btn reset-btn" (click)="resetProgress()">
+        <span class="control-icon">🔄</span>
+        <span class="control-text">Fortschritt zurücksetzen</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .theme-explanation {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 0.5rem;
+    font-style: italic;
+  }
+  
+  .theme-explanation-en {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    font-style: italic;
+  }
+  
+  .dark-mode .theme-explanation,
+  .dark-mode .theme-explanation-en {
+    color: #aaa;
+  }
+  
+  .option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f5f5f5;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .option:hover:not(.disabled) {
+    background-color: #eeeeee;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  }
+  
+  .option.selected {
+    background-color: #e8f0fe;
+    border-color: #4285f4;
+  }
+  
+  .option.correct {
+    background-color: #e6f4ea;
+    border-color: #34a853;
+  }
+  
+  .option.incorrect {
+    background-color: #fce8e6;
+    border-color: #ea4335;
+  }
+  
+  .option-marker {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-weight: 600;
+    border: 1px solid #ccc;
+  }
+  
+  .option.selected .option-marker {
+    background-color: #4285f4;
+    color: white;
+    border-color: #4285f4;
+  }
+  
+  .option.correct .option-marker {
+    background-color: #34a853;
+    color: white;
+    border-color: #34a853;
+  }
+  
+  .option.incorrect .option-marker {
+    background-color: #ea4335;
+    color: white;
+    border-color: #ea4335;
+  }
+  
+  .correct-mark, .incorrect-mark {
+    position: absolute;
+    right: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .correct-mark {
+    color: #34a853;
+  }
+  
+  .incorrect-mark {
+    color: #ea4335;
+  }
+  
+  .pagination-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pagination {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pagination-btn {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+  }
+  
+  .pagination-btn.active {
+    background-color: #1e3a8a;
+    color: white;
+    border-color: #1e3a8a;
+  }
+  
+  .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination-icon {
+    font-size: 12px;
+  }
+  
+  .pagination-info {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .dark-mode .pagination-btn {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #ddd;
+  }
+  
+  .dark-mode .pagination-btn:hover:not(:disabled) {
+    background-color: #444;
+  }
+  
+  .dark-mode .pagination-btn.active {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+  }
+  
+  .dark-mode .pagination-info {
+    color: #aaa;
+  }
+</style>

@@ -1,0 +1,737 @@
+[
+    {
+      "incomplete": "Ich ___ (to be) ein Student.",
+      "correct": "Ich bin ein Student.",
+      "explanation": "In German, \"to be\" is \"sein\". For \"ich\" (I), it conjugates to \"bin\"."
+    },
+    {
+      "incomplete": "Wir ___ (to go) ins Kino.",
+      "correct": "Wir gehen ins Kino.",
+      "explanation": "The verb \"gehen\" (to go) conjugates to \"gehen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Du ___ (to have) ein Buch.",
+      "correct": "Du hast ein Buch.",
+      "explanation": "The verb \"haben\" (to have) conjugates to \"hast\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to eat) Pizza.",
+      "correct": "Er isst Pizza.",
+      "explanation": "The verb \"essen\" (to eat) conjugates to \"isst\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to drink) Wasser.",
+      "correct": "Sie trinkt Wasser.",
+      "explanation": "The verb \"trinken\" (to drink) conjugates to \"trinkt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to play) Fußball.",
+      "correct": "Ihr spielt Fußball.",
+      "explanation": "The verb \"spielen\" (to play) conjugates to \"spielt\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to see) den Film.",
+      "correct": "Wir sehen den Film.",
+      "explanation": "The verb \"sehen\" (to see) conjugates to \"sehen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to write) einen Brief.",
+      "correct": "Ich schreibe einen Brief.",
+      "explanation": "The verb \"schreiben\" (to write) conjugates to \"schreibe\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to read) ein Buch.",
+      "correct": "Du liest ein Buch.",
+      "explanation": "The verb \"lesen\" (to read) conjugates to \"liest\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to speak) Deutsch.",
+      "correct": "Er spricht Deutsch.",
+      "explanation": "The verb \"sprechen\" (to speak) conjugates to \"spricht\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to come) später.",
+      "correct": "Sie kommt später.",
+      "explanation": "The verb \"kommen\" (to come) conjugates to \"kommt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to learn) Deutsch.",
+      "correct": "Wir lernen Deutsch.",
+      "explanation": "The verb \"lernen\" (to learn) conjugates to \"lernen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to make) einen Kuchen.",
+      "correct": "Ich mache einen Kuchen.",
+      "explanation": "The verb \"machen\" (to make) conjugates to \"mache\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to sleep) gut.",
+      "correct": "Du schläfst gut.",
+      "explanation": "The verb \"schlafen\" (to sleep) conjugates to \"schläfst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to drive) nach Hause.",
+      "correct": "Er fährt nach Hause.",
+      "explanation": "The verb \"fahren\" (to drive) conjugates to \"fährt\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to buy) ein Kleid.",
+      "correct": "Sie kauft ein Kleid.",
+      "explanation": "The verb \"kaufen\" (to buy) conjugates to \"kauft\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to run) schnell.",
+      "correct": "Ihr lauft schnell.",
+      "explanation": "The verb \"laufen\" (to run) conjugates to \"lauft\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to work) heute.",
+      "correct": "Wir arbeiten heute.",
+      "explanation": "The verb \"arbeiten\" (to work) conjugates to \"arbeiten\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to help) dir.",
+      "correct": "Ich helfe dir.",
+      "explanation": "The verb \"helfen\" (to help) conjugates to \"helfe\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to know) die Antwort.",
+      "correct": "Du weißt die Antwort.",
+      "explanation": "The verb \"wissen\" (to know) conjugates to \"weißt\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to think) an dich.",
+      "correct": "Er denkt an dich.",
+      "explanation": "The verb \"denken\" (to think) conjugates to \"denkt\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to hear) Musik.",
+      "correct": "Sie hört Musik.",
+      "explanation": "The verb \"hören\" (to hear) conjugates to \"hört\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to swim) im See.",
+      "correct": "Wir schwimmen im See.",
+      "explanation": "The verb \"schwimmen\" (to swim) conjugates to \"schwimmen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to open) die Tür.",
+      "correct": "Ich öffne die Tür.",
+      "explanation": "The verb \"öffnen\" (to open) conjugates to \"öffne\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to close) das Fenster.",
+      "correct": "Du schließt das Fenster.",
+      "explanation": "The verb \"schließen\" (to close) conjugates to \"schließt\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to love) seine Familie.",
+      "correct": "Er liebt seine Familie.",
+      "explanation": "The verb \"lieben\" (to love) conjugates to \"liebt\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to find) den Schlüssel.",
+      "correct": "Sie findet den Schlüssel.",
+      "explanation": "The verb \"finden\" (to find) conjugates to \"findet\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to search) das Buch.",
+      "correct": "Ihr sucht das Buch.",
+      "explanation": "The verb \"suchen\" (to search) conjugates to \"sucht\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to travel) nach Berlin.",
+      "correct": "Wir reisen nach Berlin.",
+      "explanation": "The verb \"reisen\" (to travel) conjugates to \"reisen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to stay) zu Hause.",
+      "correct": "Ich bleibe zu Hause.",
+      "explanation": "The verb \"bleiben\" (to stay) conjugates to \"bleibe\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to leave) die Stadt.",
+      "correct": "Du verlässt die Stadt.",
+      "explanation": "The verb \"verlassen\" (to leave) conjugates to \"verlässt\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to meet) seine Freunde.",
+      "correct": "Er trifft seine Freunde.",
+      "explanation": "The verb \"treffen\" (to meet) conjugates to \"trifft\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to forget) den Termin.",
+      "correct": "Sie vergisst den Termin.",
+      "explanation": "The verb \"vergessen\" (to forget) conjugates to \"vergisst\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to remember) den Tag.",
+      "correct": "Wir erinnern den Tag.",
+      "explanation": "The verb \"erinnern\" (to remember) conjugates to \"erinnern\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to jump) hoch.",
+      "correct": "Ich springe hoch.",
+      "explanation": "The verb \"springen\" (to jump) conjugates to \"springe\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to fly) nach Hause.",
+      "correct": "Du fliegst nach Hause.",
+      "explanation": "The verb \"fliegen\" (to fly) conjugates to \"fliegst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to stand) am Fenster.",
+      "correct": "Er steht am Fenster.",
+      "explanation": "The verb \"stehen\" (to stand) conjugates to \"steht\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to sit) am Tisch.",
+      "correct": "Sie sitzt am Tisch.",
+      "explanation": "The verb \"sitzen\" (to sit) conjugates to \"sitzt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to get up) früh.",
+      "correct": "Ihr steht früh auf.",
+      "explanation": "The verb \"aufstehen\" (to get up) conjugates to \"steht auf\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to cook) das Essen.",
+      "correct": "Wir kochen das Essen.",
+      "explanation": "The verb \"kochen\" (to cook) conjugates to \"kochen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to laugh) laut.",
+      "correct": "Ich lache laut.",
+      "explanation": "The verb \"lachen\" (to laugh) conjugates to \"lache\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to cry) oft.",
+      "correct": "Du weinst oft.",
+      "explanation": "The verb \"weinen\" (to cry) conjugates to \"weinst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to understand) das Problem.",
+      "correct": "Er versteht das Problem.",
+      "explanation": "The verb \"verstehen\" (to understand) conjugates to \"versteht\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to ask) eine Frage.",
+      "correct": "Sie fragt eine Frage.",
+      "explanation": "The verb \"fragen\" (to ask) conjugates to \"fragt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to answer) die Frage.",
+      "correct": "Wir antworten die Frage.",
+      "explanation": "The verb \"antworten\" (to answer) conjugates to \"antworten\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to show) dir den Weg.",
+      "correct": "Ich zeige dir den Weg.",
+      "explanation": "The verb \"zeigen\" (to show) conjugates to \"zeige\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to wait) auf mich.",
+      "correct": "Du wartest auf mich.",
+      "explanation": "The verb \"warten\" (to wait) conjugates to \"wartest\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to win) das Spiel.",
+      "correct": "Er gewinnt das Spiel.",
+      "explanation": "The verb \"gewinnen\" (to win) conjugates to \"gewinnt\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to lose) den Schlüssel.",
+      "correct": "Sie verliert den Schlüssel.",
+      "explanation": "The verb \"verlieren\" (to lose) conjugates to \"verliert\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to sell) das Auto.",
+      "correct": "Ihr verkauft das Auto.",
+      "explanation": "The verb \"verkaufen\" (to sell) conjugates to \"verkauft\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to begin) jetzt.",
+      "correct": "Wir beginnen jetzt.",
+      "explanation": "The verb \"anfangen\" (to begin) can also be \"beginnen\", which conjugates to \"beginnen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to end) die Arbeit.",
+      "correct": "Ich ende die Arbeit.",
+      "explanation": "The verb \"enden\" (to end) conjugates to \"ende\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to feel) dich gut.",
+      "correct": "Du fühlst dich gut.",
+      "explanation": "The verb \"fühlen\" (to feel) conjugates to \"fühlst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to hate) den Film.",
+      "correct": "Er hasst den Film.",
+      "explanation": "The verb \"hassen\" (to hate) conjugates to \"hasst\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to live) in Berlin.",
+      "correct": "Sie wohnt in Berlin.",
+      "explanation": "The verb \"wohnen\" (to live) conjugates to \"wohnt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to visit) die Stadt.",
+      "correct": "Wir besuchen die Stadt.",
+      "explanation": "The verb \"besuchen\" (to visit) conjugates to \"besuchen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to call) dich an.",
+      "correct": "Ich rufe dich an.",
+      "explanation": "The verb \"anrufen\" (to call) conjugates to \"rufe an\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to dance) gern.",
+      "correct": "Du tanzt gern.",
+      "explanation": "The verb \"tanzen\" (to dance) conjugates to \"tanzt\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to sing) ein Lied.",
+      "correct": "Er singt ein Lied.",
+      "explanation": "The verb \"singen\" (to sing) conjugates to \"singt\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to paint) das Bild.",
+      "correct": "Sie malt das Bild.",
+      "explanation": "The verb \"malen\" (to paint) conjugates to \"malt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to draw) ein Bild.",
+      "correct": "Ihr zeichnet ein Bild.",
+      "explanation": "The verb \"zeichnen\" (to draw) conjugates to \"zeichnet\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to clean) das Haus.",
+      "correct": "Wir putzen das Haus.",
+      "explanation": "The verb \"putzen\" (to clean) conjugates to \"putzen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to wash) die Wäsche.",
+      "correct": "Ich wasche die Wäsche.",
+      "explanation": "The verb \"waschen\" (to wash) conjugates to \"wasche\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to dry) die Teller.",
+      "correct": "Du trocknest die Teller.",
+      "explanation": "The verb \"trocknen\" (to dry) conjugates to \"trocknest\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to repair) das Auto.",
+      "correct": "Er repariert das Auto.",
+      "explanation": "The verb \"reparieren\" (to repair) conjugates to \"repariert\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to build) ein Haus.",
+      "correct": "Sie baut ein Haus.",
+      "explanation": "The verb \"bauen\" (to build) conjugates to \"baut\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to plant) Blumen.",
+      "correct": "Wir pflanzen Blumen.",
+      "explanation": "The verb \"pflanzen\" (to plant) conjugates to \"pflanzen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to cut) das Brot.",
+      "correct": "Ich schneide das Brot.",
+      "explanation": "The verb \"schneiden\" (to cut) conjugates to \"schneide\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to bake) einen Kuchen.",
+      "correct": "Du backst einen Kuchen.",
+      "explanation": "The verb \"backen\" (to bake) conjugates to \"backst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to fry) das Fleisch.",
+      "correct": "Er brät das Fleisch.",
+      "explanation": "The verb \"braten\" (to fry) conjugates to \"brät\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to mix) den Teig.",
+      "correct": "Sie mischt den Teig.",
+      "explanation": "The verb \"mischen\" (to mix) conjugates to \"mischt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to taste) das Essen.",
+      "correct": "Ihr schmeckt das Essen.",
+      "explanation": "The verb \"schmecken\" (to taste) conjugates to \"schmeckt\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to order) Pizza.",
+      "correct": "Wir bestellen Pizza.",
+      "explanation": "The verb \"bestellen\" (to order) conjugates to \"bestellen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to pay) die Rechnung.",
+      "correct": "Ich bezahle die Rechnung.",
+      "explanation": "The verb \"bezahlen\" (to pay) conjugates to \"bezahle\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to count) das Geld.",
+      "correct": "Du zählst das Geld.",
+      "explanation": "The verb \"zählen\" (to count) conjugates to \"zählst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to save) Geld.",
+      "correct": "Er spart Geld.",
+      "explanation": "The verb \"sparen\" (to save) conjugates to \"spart\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to spend) viel Geld.",
+      "correct": "Sie gibt viel Geld aus.",
+      "explanation": "The verb \"ausgeben\" (to spend) conjugates to \"gibt aus\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to borrow) ein Buch.",
+      "correct": "Wir leihen ein Buch.",
+      "explanation": "The verb \"leihen\" (to borrow) conjugates to \"leihen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to lend) dir Geld.",
+      "correct": "Ich leihe dir Geld.",
+      "explanation": "The verb \"leihen\" (to lend) conjugates to \"leihe\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to give) mir ein Geschenk.",
+      "correct": "Du gibst mir ein Geschenk.",
+      "explanation": "The verb \"geben\" (to give) conjugates to \"gibst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to take) den Bus.",
+      "correct": "Er nimmt den Bus.",
+      "explanation": "The verb \"nehmen\" (to take) conjugates to \"nimmt\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to bring) das Essen.",
+      "correct": "Sie bringt das Essen.",
+      "explanation": "The verb \"bringen\" (to bring) conjugates to \"bringt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to send) einen Brief.",
+      "correct": "Ihr schickt einen Brief.",
+      "explanation": "The verb \"schicken\" (to send) conjugates to \"schickt\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to receive) einen Brief.",
+      "correct": "Wir erhalten einen Brief.",
+      "explanation": "The verb \"erhalten\" (to receive) conjugates to \"erhalten\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to tell) eine Geschichte.",
+      "correct": "Ich erzähle eine Geschichte.",
+      "explanation": "The verb \"erzählen\" (to tell) conjugates to \"erzähle\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to explain) das Problem.",
+      "correct": "Du erklärst das Problem.",
+      "explanation": "The verb \"erklären\" (to explain) conjugates to \"erklärst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to promise) mir etwas.",
+      "correct": "Er verspricht mir etwas.",
+      "explanation": "The verb \"versprechen\" (to promise) conjugates to \"verspricht\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to invite) Freunde.",
+      "correct": "Sie lädt Freunde ein.",
+      "explanation": "The verb \"einladen\" (to invite) conjugates to \"lädt ein\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to accept) das Angebot.",
+      "correct": "Wir nehmen das Angebot an.",
+      "explanation": "The verb \"annehmen\" (to accept) conjugates to \"nehmen an\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to refuse) das Angebot.",
+      "correct": "Ich lehne das Angebot ab.",
+      "explanation": "The verb \"ablehnen\" (to refuse) conjugates to \"lehne ab\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to decide) schnell.",
+      "correct": "Du entscheidest schnell.",
+      "explanation": "The verb \"entscheiden\" (to decide) conjugates to \"entscheidest\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to choose) ein Geschenk.",
+      "correct": "Er wählt ein Geschenk.",
+      "explanation": "The verb \"wählen\" (to choose) conjugates to \"wählt\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to plan) eine Reise.",
+      "correct": "Sie plant eine Reise.",
+      "explanation": "The verb \"planen\" (to plan) conjugates to \"plant\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to prepare) das Essen.",
+      "correct": "Ihr bereitet das Essen vor.",
+      "explanation": "The verb \"vorbereiten\" (to prepare) conjugates to \"bereitet vor\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to finish) die Arbeit.",
+      "correct": "Wir beenden die Arbeit.",
+      "explanation": "The verb \"beenden\" (to finish) conjugates to \"beenden\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to start) jetzt.",
+      "correct": "Ich fange jetzt an.",
+      "explanation": "The verb \"anfangen\" (to start) conjugates to \"fange an\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to stop) hier.",
+      "correct": "Du hörst hier auf.",
+      "explanation": "The verb \"aufhören\" (to stop) conjugates to \"hörst auf\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to continue) die Arbeit.",
+      "correct": "Er fährt mit der Arbeit fort.",
+      "explanation": "The verb \"fortfahren\" (to continue) conjugates to \"fährt fort\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to improve) ihr Deutsch.",
+      "correct": "Sie verbessert ihr Deutsch.",
+      "explanation": "The verb \"verbessern\" (to improve) conjugates to \"verbessert\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to practice) jeden Tag.",
+      "correct": "Wir üben jeden Tag.",
+      "explanation": "The verb \"üben\" (to practice) conjugates to \"üben\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to try) es nochmal.",
+      "correct": "Ich versuche es nochmal.",
+      "explanation": "The verb \"versuchen\" (to try) conjugates to \"versuche\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to succeed) immer.",
+      "correct": "Du hast immer Erfolg.",
+      "explanation": "The verb \"erfolgreich sein\" (to succeed) uses \"haben\" and conjugates to \"hast\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to fail) oft.",
+      "correct": "Er scheitert oft.",
+      "explanation": "The verb \"scheitern\" (to fail) conjugates to \"scheitert\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to win) das Spiel.",
+      "correct": "Sie gewinnt das Spiel.",
+      "explanation": "The verb \"gewinnen\" (to win) conjugates to \"gewinnt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to lose) das Spiel.",
+      "correct": "Ihr verliert das Spiel.",
+      "explanation": "The verb \"verlieren\" (to lose) conjugates to \"verliert\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to celebrate) heute.",
+      "correct": "Wir feiern heute.",
+      "explanation": "The verb \"feiern\" (to celebrate) conjugates to \"feiern\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to relax) am Wochenende.",
+      "correct": "Ich entspanne am Wochenende.",
+      "explanation": "The verb \"entspannen\" (to relax) conjugates to \"entspanne\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to enjoy) den Film.",
+      "correct": "Du genießt den Film.",
+      "explanation": "The verb \"genießen\" (to enjoy) conjugates to \"genießt\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to dream) von dir.",
+      "correct": "Er träumt von dir.",
+      "explanation": "The verb \"träumen\" (to dream) conjugates to \"träumt\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to hope) auf Regen.",
+      "correct": "Sie hofft auf Regen.",
+      "explanation": "The verb \"hoffen\" (to hope) conjugates to \"hofft\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to believe) an dich.",
+      "correct": "Wir glauben an dich.",
+      "explanation": "The verb \"glauben\" (to believe) conjugates to \"glauben\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to doubt) das.",
+      "correct": "Ich zweifle das an.",
+      "explanation": "The verb \"zweifeln\" (to doubt) conjugates to \"zweifle an\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to trust) mir.",
+      "correct": "Du vertraust mir.",
+      "explanation": "The verb \"vertrauen\" (to trust) conjugates to \"vertraust\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to fear) die Dunkelheit.",
+      "correct": "Er fürchtet die Dunkelheit.",
+      "explanation": "The verb \"fürchten\" (to fear) conjugates to \"fürchtet\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to love) die Natur.",
+      "correct": "Sie liebt die Natur.",
+      "explanation": "The verb \"lieben\" (to love) conjugates to \"liebt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to hate) den Lärm.",
+      "correct": "Ihr hasst den Lärm.",
+      "explanation": "The verb \"hassen\" (to hate) conjugates to \"hasst\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to respect) die Regeln.",
+      "correct": "Wir respektieren die Regeln.",
+      "explanation": "The verb \"respektieren\" (to respect) conjugates to \"respektieren\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to admire) ihn.",
+      "correct": "Ich bewundere ihn.",
+      "explanation": "The verb \"bewundern\" (to admire) conjugates to \"bewundere\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to thank) mich.",
+      "correct": "Du dankst mir.",
+      "explanation": "The verb \"danken\" (to thank) conjugates to \"dankst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to greet) die Gäste.",
+      "correct": "Er grüßt die Gäste.",
+      "explanation": "The verb \"grüßen\" (to greet) conjugates to \"grüßt\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to wave) zurück.",
+      "correct": "Sie winkt zurück.",
+      "explanation": "The verb \"winken\" (to wave) conjugates to \"winkt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to smile) oft.",
+      "correct": "Wir lächeln oft.",
+      "explanation": "The verb \"lächeln\" (to smile) conjugates to \"lächeln\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to nod) zustimmend.",
+      "correct": "Ich nicke zustimmend.",
+      "explanation": "The verb \"nicken\" (to nod) conjugates to \"nicke\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to shake) den Kopf.",
+      "correct": "Du schüttelst den Kopf.",
+      "explanation": "The verb \"schütteln\" (to shake) conjugates to \"schüttelst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to point) auf das Bild.",
+      "correct": "Er zeigt auf das Bild.",
+      "explanation": "The verb \"zeigen\" (to point) conjugates to \"zeigt\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to knock) an die Tür.",
+      "correct": "Sie klopft an die Tür.",
+      "explanation": "The verb \"klopfen\" (to knock) conjugates to \"klopft\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to ring) die Glocke.",
+      "correct": "Ihr läutet die Glocke.",
+      "explanation": "The verb \"läuten\" (to ring) conjugates to \"läutet\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to listen) zur Musik.",
+      "correct": "Wir hören der Musik zu.",
+      "explanation": "The verb \"zuhören\" (to listen) conjugates to \"hören zu\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to watch) den Film.",
+      "correct": "Ich schaue den Film an.",
+      "explanation": "The verb \"anschauen\" (to watch) conjugates to \"schaue an\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to look) aus dem Fenster.",
+      "correct": "Du schaust aus dem Fenster.",
+      "explanation": "The verb \"schauen\" (to look) conjugates to \"schaust\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to smell) die Blumen.",
+      "correct": "Er riecht die Blumen.",
+      "explanation": "The verb \"riechen\" (to smell) conjugates to \"riecht\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to touch) den Tisch.",
+      "correct": "Sie berührt den Tisch.",
+      "explanation": "The verb \"berühren\" (to touch) conjugates to \"berührt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to taste) den Wein.",
+      "correct": "Wir probieren den Wein.",
+      "explanation": "The verb \"probieren\" (to taste) conjugates to \"probieren\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to lift) die Tasche.",
+      "correct": "Ich hebe die Tasche.",
+      "explanation": "The verb \"heben\" (to lift) conjugates to \"hebe\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to push) den Wagen.",
+      "correct": "Du schiebst den Wagen.",
+      "explanation": "The verb \"schieben\" (to push) conjugates to \"schiebst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to pull) die Tür.",
+      "correct": "Er zieht die Tür.",
+      "explanation": "The verb \"ziehen\" (to pull) conjugates to \"zieht\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to carry) die Tasche.",
+      "correct": "Sie trägt die Tasche.",
+      "explanation": "The verb \"tragen\" (to carry) conjugates to \"trägt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Ihr ___ (to throw) den Ball.",
+      "correct": "Ihr werft den Ball.",
+      "explanation": "The verb \"werfen\" (to throw) conjugates to \"werft\" for \"ihr\" (you, plural informal)."
+    },
+    {
+      "incomplete": "Wir ___ (to catch) den Ball.",
+      "correct": "Wir fangen den Ball.",
+      "explanation": "The verb \"fangen\" (to catch) conjugates to \"fangen\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to kick) den Ball.",
+      "correct": "Ich trete den Ball.",
+      "explanation": "The verb \"treten\" (to kick) conjugates to \"trete\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to hit) den Ball.",
+      "correct": "Du schlägst den Ball.",
+      "explanation": "The verb \"schlagen\" (to hit) conjugates to \"schlägst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to climb) den Berg.",
+      "correct": "Er klettert den Berg.",
+      "explanation": "The verb \"klettern\" (to climb) conjugates to \"klettert\" for \"er\" (he)."
+    },
+    {
+      "incomplete": "Sie ___ (to fall) oft.",
+      "correct": "Sie fällt oft.",
+      "explanation": "The verb \"fallen\" (to fall) conjugates to \"fällt\" for \"sie\" (she)."
+    },
+    {
+      "incomplete": "Wir ___ (to rise) früh auf.",
+      "correct": "Wir stehen früh auf.",
+      "explanation": "The verb \"aufstehen\" (to rise) conjugates to \"stehen auf\" for \"wir\" (we)."
+    },
+    {
+      "incomplete": "Ich ___ (to sit) auf dem Stuhl.",
+      "correct": "Ich sitze auf dem Stuhl.",
+      "explanation": "The verb \"sitzen\" (to sit) conjugates to \"sitze\" for \"ich\" (I)."
+    },
+    {
+      "incomplete": "Du ___ (to lie) im Bett.",
+      "correct": "Du liegst im Bett.",
+      "explanation": "The verb \"liegen\" (to lie) conjugates to \"liegst\" for \"du\" (you, singular informal)."
+    },
+    {
+      "incomplete": "Er ___ (to stand) am Fenster.",
+      "correct": "Er steht am Fenster.",
+      "explanation": "The verb \"stehen\" (to stand) conjugates to \"steht\" for \"er\" (he)."
+    }
+]
