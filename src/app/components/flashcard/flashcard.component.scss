@@ -75,13 +75,18 @@ $danger: #ef4444;
   
   .app-title {
     display: flex;
+    flex-wrap: wrap; /* Engedélyezzük a törést, ha nem fér el egy sorban */
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 2rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px; /* Csökkentettük a 2px-ről, hogy kisebb helyen elférjen */
+    font-size: clamp(1rem, 4vw, 2rem); /* Dinamikus betűméret */
+    max-width: 100%; /* Biztosítjuk, hogy ne lógjon ki */
+    padding: 0 0.5rem; /* Oldalsó padding a kilógás ellen */
+    box-sizing: border-box;
     
     .title-accent {
       color: $primary;
