@@ -1,4 +1,3 @@
-// src/app/components/flashcard/flashcard.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService } from '../../services/data.service';
@@ -122,14 +121,17 @@ export class FlashcardComponent implements OnInit {
   
   // Hangok inicializálása
   initVoices(): void {
-    // Azonnal lekérjük a hangokat, ha már elérhetőek
+    // Azonnal lekérjük a hangokat
     this.availableVoices = window.speechSynthesis.getVoices();
-    
-    // Ha nincs hang, akkor feliratkozunk a voiceschanged eseményre
+
+    // Ha üres a lista, várunk a voiceschanged eseményre
     if (this.availableVoices.length === 0) {
       window.speechSynthesis.onvoiceschanged = () => {
         this.availableVoices = window.speechSynthesis.getVoices();
+        console.log('Voices loaded:', this.availableVoices.map(v => `${v.name} (${v.lang})`));
       };
+    } else {
+      console.log('Voices initially loaded:', this.availableVoices.map(v => `${v.name} (${v.lang})`));
     }
   }
 
@@ -194,33 +196,33 @@ export class FlashcardComponent implements OnInit {
     // Nyelv beállítása
     utterance.lang = isGermanText ? 'de-DE' : 'en-US';
     
-    // Ha angol, további beállítások
-    if (!isGermanText) {
-      // Az angol hangbeállítások finomhangolása
-      utterance.rate = 0.9; // Lassabb beszédsebesség
-      utterance.pitch = 1.0; // Normál hangmagasság
-      
-      // Megfelelő angol hang keresése
-      const englishVoice = this.availableVoices.find(voice => 
-        (voice.lang.includes('en-US') || voice.lang.includes('en-GB')) && 
-        !voice.name.toLowerCase().includes('microsoft')
-      );
-      
-      if (englishVoice) {
-        utterance.voice = englishVoice;
-        console.log('Using English voice:', englishVoice.name);
-      } else {
-        console.log('No suitable English voice found, using default');
-      }
+    // Hangbeállítások finomhangolása
+    utterance.rate = 0.9; // Lassabb beszédsebesség
+    utterance.pitch = 1.0; // Normál hangmagasság
+    
+    // Google hangok keresése
+    const googleVoice = this.availableVoices.find(voice => {
+      const voiceName = voice.name.toLowerCase();
+      const isGoogleVoice = voiceName.includes('google');
+      const matchesLang = isGermanText 
+        ? voice.lang.includes('de-DE') 
+        : (voice.lang.includes('en-US') || voice.lang.includes('en-GB'));
+      return isGoogleVoice && matchesLang;
+    });
+    
+    // Ha van Google hang, azt használjuk, különben fallback
+    if (googleVoice) {
+      utterance.voice = googleVoice;
+      console.log(`Using Google voice: ${googleVoice.name} for ${utterance.lang}`);
     } else {
-      // Német hangbeállítások
-      const germanVoice = this.availableVoices.find(voice => 
-        voice.lang.includes('de-DE')
+      // Fallback hang keresése a megfelelő nyelvre
+      const fallbackVoice = this.availableVoices.find(voice => 
+        isGermanText 
+          ? voice.lang.includes('de-DE') 
+          : (voice.lang.includes('en-US') || voice.lang.includes('en-GB'))
       );
-      
-      if (germanVoice) {
-        utterance.voice = germanVoice;
-      }
+      utterance.voice = fallbackVoice || null; // Null esetén az alapértelmezett hangot használja a rendszer
+      console.log(`Google voice not found. Using: ${fallbackVoice?.name || 'default system voice'} for ${utterance.lang}`);
     }
     
     window.speechSynthesis.speak(utterance);
